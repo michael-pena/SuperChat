@@ -1,0 +1,18 @@
+welcome
+//Welcome WINDOW*
+getch();
+welcome_window = newwin(y_max,x_max,0,0); //(length, width,lines_down, lines to right)
+box(welcome_window,0,0);
+mvwprintw(welcome_window,1,((x_max/2)-12),"Welcome to SuperChat");
+mvwprintw(welcome_window,4,1,"Insructions:");
+mvwprintw(welcome_window,5,3,"Sign in with /register and enter a valid username to register with the server.");
+mvwprintw(welcome_window,6,1,"Then start typing your message to start chatting.");
+mvwprintw(welcome_window,8,1,"Commands:");
+mvwprintw(welcome_window,9,3,"To create a Chatroom - /create <chatroom name>");
+mvwprintw(welcome_window,10,3,"To switch Chatrooms - /switch");
+mvwprintw(welcome_window,11,3,"To exit - /exit");
+mvwprintw(welcome_window,12,3,"To show this screen again - /help");
+mvwprintw(welcome_window,(y_max-2),((x_max/2)-12),"Press any key to continue");
+wrefresh(welcome_window);
+getch();
+wclear(welcome_window);
